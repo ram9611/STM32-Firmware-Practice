@@ -11,11 +11,11 @@ int main(void)
 	RCC -> AHB1ENR |= 0x00000004;
 
 	//PC6를 General-purpose OUTPUT 모드로 설정
-	GPIOC -> MODER &= ~0x0003000;
-	GPIOC -> MODER |= 0x00001000;
+	GPIOC -> MODER &= ~0x00030000;
+	GPIOC -> MODER |= 0x00010000;
 
 	//PC6 중간 속도로 설정
-	GPIOC -> OSPEEDR &= 0x00003000;
+	GPIOC -> OSPEEDR &= ~0x00003000;
 	GPIOC -> OSPEEDR |= 0x00001000;
 
 	//
